@@ -1,12 +1,12 @@
 async function save_options(e) {
     e.preventDefault();
-    await browser.storage.sync.set({
-	blocked: document.querySelector("#blocked").value
+    await browser.storage.local.set({
+        blocked: document.querySelector("#blocked").value
     });
 }
 
 async function restore_options() {
-    let res = await browser.storage.managed.get('blocked');
+    let res = await browser.storage.local.get('blocked');
     document.querySelector("#blocked").value = res.blocked;
 }
 
