@@ -1,0 +1,14 @@
+{
+  "manifest_version": 2,
+  "name": "monk",
+  "version": "0.1",
+
+  "description": "stay focus",
+
+  "content_scripts": [
+    {
+      "matches": ["*"],
+      "js": ["monk.js"]
+    }
+  ]
+}
